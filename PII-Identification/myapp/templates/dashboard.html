@@ -1,0 +1,31 @@
+<!-- home.html -->
+{% extends 'base.html' %} {% block title %}Home - My Website{% endblock %} {% block content %}
+<!-- Content Block -->
+<div class="container mt-4 content-block">
+  <div class="row">
+    <div class="col-md-6">
+      <div class="card">
+        <div class="card-body">
+          <a href="/dashboard/?doc=PAYSLIP"
+            ><h5 class="card-title p-4 text-center theme-color">PAYSLIP</h5></a
+          >
+        </div>
+      </div>
+    </div>
+    <div class="col-md-6">
+      <div class="card">
+        <div class="card-body">
+          <a href="/dashboard/?doc=TAX_INVOICE"
+            ><h5 class="card-title p-4 text-center theme-color">TAX INVOICE</h5></a
+          >
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row mt-4">
+    {% autoescape off %}
+    <div class="col-md-12">{{process_data}}</div>
+    {% endautoescape %}
+  </div>
+</div>
+{% endblock %}
